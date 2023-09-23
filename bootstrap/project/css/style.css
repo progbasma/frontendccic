@@ -1,0 +1,88 @@
+:root{
+    --color1:#F4511E;
+}
+@font-face {
+    font-family: "monteserat";
+    src: url(../fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "lato";
+    src: url(../fonts/Lato-Regular.ttf);
+}
+.mybgcolor{
+    background-color: var(--color1)!important;
+}
+.fa-solid{
+    color: var(--color1)!important;
+}
+/*start navbar*/
+.mynav{
+    
+    background-color: var(--color1)!important;
+    font-family: "monteserat";
+    letter-spacing: 2px;
+    font-size: 13px;
+}
+
+.navbar .nav-link{
+    color: white!important;
+    padding:0.8rem 1rem!important;
+}
+.navbar .active,.navbar .nav-link:hover {
+    background-color: white!important;
+    color: var(--color1)!important;
+}
+
+
+.navbar-toggler {
+    background-color: silver!important;
+ 
+}
+.navbar-toggler .navbar-toggler-icon{
+    background-image: none;
+
+}
+
+.navbar-toggler:hover ,.navbar-toggler:focus{
+    border: none;
+    box-shadow: none;
+}
+
+
+
+
+/*end navbar*/
+
+/* start header */
+
+header{
+    font-family: "monteserat";
+    
+
+}
+
+header h1{
+    font-size: 50px;
+    font-family: "monteserat";
+
+    font-weight: normal;
+}
+
+/* start header */
+
+/* start about */
+
+#about {
+    font-family: "lato";
+}
+/* end about */
+
+
+@media screen and (max-width: 767px) {
+    .navbar-toggler,.navbar-brand{
+        margin:0.8rem 1rem!important;
+    }
+
+    
+}

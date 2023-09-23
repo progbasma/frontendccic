@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+
+</head>
+<body>
+    <div class="container mt-5 pt-5 mb-5">
+      <div class="row justify-content-center">
+         <div class="col-md-6 col-lg-4 col-xl-4">
+            <div class="card">
+               <div class="card-body">
+                  <div class="text-center m-auto">
+                     <h4 class="text-uppercase text-center">Weather</h4>
+                  </div>
+                     <input type="hidden" name="csrftoken" value="ea49375f43c7e6a59c77df1e4de562b3f1350124eeb70e5d5124e4ce3b5251c2b4d12e9aaf2a3ddc618c178c8dc4620b">
+                     <div class="form-group mb-3">
+                        <input type="text" id="city" name="city" placeholder="Enter city" class="form-control" required="">
+                     </div>
+         
+                     <div class="form-group mb-0 text-center">
+                        <button class="btn btn-primary btn-block" onclick="getweather()"  type="submit" name="submit"> Get Weather</button>
+                     </div>
+               
+               </div>
+            </div>
+
+            <div class="alert alert-info" role="alert" id="result">
+                
+            </div>
+         </div>
+      </div>
+    </div>
+ 
+   <script src="bootstrap.bundle.min.js"></script>
+   <script>
+
+   function getweather()
+   {   
+   
+    var city=document.getElementById('city').value;
+    var xhttp = new XMLHttpRequest();
+    xhttp.onload = function() {
+        document.getElementById('result').innerHTML= JSON.parse(this.responseText).main.temp;
+    }
+    xhttp.open("GET", `https://api.openweathermap.org/data/2.5/weather?appid=0bcf9b60681019070ada23eca94d3fce&units=metric&q=${city}`);
+    xhttp.send();
+
+   }  
+
+
+   </script>
+</body>
+</html>

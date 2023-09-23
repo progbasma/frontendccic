@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="timer"></div>
+    <div id="quiz">
+       
+
+    </div>
+    <button>result</button>
+
+
+    <script>
+        //array //numbered index 0
+/*         var students=new Array("rawan","sara","amgad","gamal");
+        var students2=["mariam","mostafa"];
+
+        console.log(students[0]);
+
+        for( x in students)
+        {
+            console.log(students[x]);
+        }
+
+        for( y of students)
+        {
+            console.log(y);
+        } */
+        /********************************************************/
+        //object  //named index
+
+        var student1degree={name:"rawan",
+                            degree:90};
+
+
+        console.log(student1degree);     
+        console.log(student1degree["name"]);               
+        console.log(student1degree.name);      
+        
+        for(x in student1degree)
+        {
+            console.log(student1degree[x]);
+        }
+        var quiz= document.getElementById("quiz");
+
+     
+        var q1={qnum:'q1',qtitle:"What is HTML?",qop1:"hyper test transfer language",qop2:"hyper text mono language",qop3:"hyper text markup language",qanswer:"hyper text markup language"};
+        var q2={qnum:"q2",qtitle:"What is CSS?",qop1:"cascade select sheet",qop2:"cascade style sheet",qop3:"cascade system sheet",qanswer:"cascade style sheet"};
+      
+        var arquestions=[q1,q2];
+
+        for(question of arquestions)
+        {
+            quiz.innerHTML+=question.qtitle+"<br>";
+            quiz.innerHTML+=`<input type="radio" name="${question.qnum}" id="" value="${question.qop1}">${question.qop1}<br>`;
+            quiz.innerHTML+=`<input type="radio" name="${question.qnum}" id="" value="${question.qop2}">${question.qop2}<br>`;
+            quiz.innerHTML+=`<input type="radio" name="${question.qnum}" id="" value="${question.qop3}">${question.qop3}<br>`;
+           
+
+
+
+        }
+        
+       
+     
+
+
+
+
+    </script>
+</body>
+</html>

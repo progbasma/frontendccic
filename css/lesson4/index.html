@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /*compinators*/
+        div p{
+
+        }
+        div>p{
+            background-color: yellow;
+        }
+        div+p{
+        }
+        div~p{
+            background-color: darkgoldenrod;
+        }
+        /*pesudo calss*/
+        section:hover{
+            background-color: lightgrey;
+
+        }
+        div>p:nth-child(4){
+            background-color: blueviolet;
+        }
+        
+        /*pesudo element*/
+        p::first-letter{
+            font-size: 25px;
+            color: red;
+        }
+        p::selection{
+            background-color: black;
+            color: white;
+
+        }
+        h1{
+            position: relative;
+
+        }
+    
+        h1::after{
+            position: absolute;
+            top: 50px;
+            left: 0px;
+            content: " ";
+            
+            border-bottom:8px solid rebeccapurple;
+            width: 20%;
+            
+
+        }
+        
+
+
+
+        /*attribute selectors */
+        [type="text"]{
+            padding: 10px;
+            margin: 10px;
+            background-color: lightgray;
+
+        }
+        [class*="c"]{
+            background-color: cadetblue;
+        }
+        section p[class="c1"]{
+
+        }
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        main{
+
+          
+
+        }
+        main aside{
+            background-color: lightblue;
+            width: 20%;
+            padding: 100px 20px;
+          
+
+        }
+        main #leftside{
+            float: left;
+
+        }
+        main #rightside{
+            float: right;
+            
+        }
+        .clear{
+            content:" ";
+            clear: both;
+        }
+
+
+
+
+        header h2{
+            width: 60%;
+            margin: auto;
+            background-color: lightblue;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam voluptas dolore hic tenetur officiis quidem voluptate libero minima pariatur sapiente quos voluptatibus corrupti delectus illo, suscipit ab non nesciunt quae?</h2>
+    </header>
+    <main>
+        <aside id="leftside">dd</aside>
+        <aside id="rightside">dd</aside>
+        
+    </main>
+    <div class="clear"></div>
+    <input type="text" placeholder="Enter username">
+    <h1>welcome all here</h1>
+    <div>
+        <p class="c1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui quam ut, rerum quaerat cumque alias voluptatem laboriosam exercitationem asperiores quos facilis necessitatibus eveniet atque iure iusto sunt ducimus, consequuntur minima.</p>
+        <p class="c2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui quam ut, rerum quaerat cumque alias voluptatem laboriosam exercitationem asperiores quos facilis necessitatibus eveniet atque iure iusto sunt ducimus, consequuntur minima.</p>
+        <p class="c3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui quam ut, rerum quaerat cumque alias voluptatem laboriosam exercitationem asperiores quos facilis necessitatibus eveniet atque iure iusto sunt ducimus, consequuntur minima.</p>
+
+        <section>
+             <p class="c1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui quam ut, rerum quaerat cumque alias voluptatem laboriosam exercitationem asperiores quos facilis necessitatibus eveniet atque iure iusto sunt ducimus, consequuntur minima.</p>
+
+        </section>
+    </div>
+    <span>dff</span>
+    <p>1Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo ea ipsam error aut corrupti. Veritatis libero doloribus inventore recusandae? Maxime consectetur ipsam, repudiandae laudantium quae accusamus saepe deleniti fugit neque.</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor cupiditate culpa velit debitis sit vero iste earum perferendis obcaecati, odio facilis adipisci exercitationem ab, error animi similique provident amet quos!</p>
+    <section><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, soluta, est accusamus illum suscipit laborum, quia nesciunt porro aliquid eos quaerat! Totam modi rerum non numquam perferendis error corporis consequatur!</p></section>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam incidunt beatae maxime molestiae eius quae, fugit enim, saepe tempore officia iure dolore corrupti, quo ipsa at vero ullam expedita ipsum.</p>
+    <section>  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt harum culpa ratione, officiis amet, voluptas in nobis perferendis, voluptatum omnis praesentium quibusdam! Eum earum expedita quos rem nesciunt vel facere!</p></section>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt, cupiditate? Harum, atque necessitatibus! Soluta veniam ipsa debitis deserunt? Unde dolorem eligendi omnis error veritatis officia optio soluta nostrum adipisci doloremque!</p>
+</body>
+</html>

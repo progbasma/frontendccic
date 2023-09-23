@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        /* condition*/
+        var degree=67;
+        if(degree>=85)
+        {
+            console.log("excellent");
+            
+        }
+        else if(degree>=75)
+        {
+            console.log("very good");
+
+        }
+
+        else if(degree>=65)
+        {
+            console.log(" good");
+
+        }
+        else if(degree>=50)
+        {
+            console.log("passed");
+
+        }
+        else{
+            console.log("failed");
+        }
+
+
+        var day=55;
+        switch(day)
+        {
+            case 1:
+                console.log("saturday");
+                break;
+                
+            case 2:
+                console.log("sunday");
+                break;
+            case 3:
+                console.log("monday");
+                break;
+            case 4:
+                console.log("tuesday");
+                break;
+            case 5:
+                console.log("wednesday");
+                break;
+            case 6:
+                console.log("thursday");
+                break;
+            case 7:
+                console.log("friday");
+                break;
+            default:
+                console.log("not a day");
+                break;
+
+        }
+                  
+        
+        document.write("<br>*************for****************************<br>")
+
+
+        /* loop for while do while  */
+        for(var n=50;n>=26;n-=2)
+        {
+            document.write("<br> welcome student num "+n);
+        }
+        for(x=1;x<=10;x++)
+        {
+            document.write("<br>"+x);
+        }
+
+
+        document.write("<br>*************while****************************<br>")
+
+
+        var m=1;
+        while(m<=10)
+        {
+
+            document.write("<br>"+m);
+            m++;
+        }
+
+        document.write("<br>************* do while****************************<br>")
+        var z=1;
+        do{
+            
+            document.write("<br>"+z);
+            z++;
+
+        }
+        while(z<=10);
+
+        /* var let const*/
+
+        var myname="basma";
+        var myname="ahmed"; //redeclaration true
+ 
+        myname="ebrahim";  //reassignment true
+
+        let myjob="instructor";
+      
+
+        let myage=32; //redeclaration false
+        myage=30;     //reassignment true
+
+        function typename()
+        {
+            let myjob="full stack developer";
+           
+            console.log(myjob);
+
+        }
+
+
+      
+
+        typename();
+        console.log(myjob);
+
+
+        console.log(myname);
+        console.log(myage);
+
+        const mylength=160; //redeclaration false 
+        //mylength=170;
+        //console.log(mylength); //reassignment false
+
+
+
+        /* functions*/
+
+        function welcomemessage()
+        {
+
+            console.log("welcome all here");
+
+        }
+
+       welcomemessage();
+
+       function convertfrompixeltocm(pixels)
+       {
+
+            var cmresult=pixels/37.795275591;
+            return cmresult;
+            
+
+       }
+       console.log(convertfrompixeltocm(300));
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>

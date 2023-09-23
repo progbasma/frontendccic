@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1"></p>
+    
+    <script>
+
+
+        //date
+
+        var d1=new Date();
+        //console.log(d1);
+
+
+        var d2=new Date(2023,8,11,10);
+
+        //date as string 
+
+        var d3=new Date("2023-10-1 10:30"); //ISO
+        var d4=new Date("11/1/2023 10:30");//short date
+        var d5=new Date("11 sep 2023 10:30");//long date
+
+        document.getElementById('p1').innerHTML+="<br>"+d5.toLocaleDateString();
+        document.getElementById('p1').innerHTML+="<br>"+d5.toLocaleTimeString();
+        document.getElementById('p1').innerHTML+="<br>"+d5.toLocaleString();
+        document.getElementById('p1').innerHTML+="<br>"+typeof(d5);
+        document.getElementById('p1').innerHTML+="<br>"+typeof(d5.toString());
+        document.getElementById('p1').innerHTML+="<br>"+d5.getDate();
+        document.getElementById('p1').innerHTML+="<br>"+d5.getDay();
+        document.getElementById('p1').innerHTML+="<br>"+d5.getFullYear();
+        d5.setFullYear(2024);
+        d5.setHours(9);
+        document.getElementById('p1').innerHTML+="<br>"+d5.toLocaleString();
+
+        /******************************************************************/
+
+        var students1=new Array("amgad","gamal","mostafa","mohamed","sara","mariam","hana");
+        var students2=["hager","awatef","mona","norhan","mohamed"];
+
+        //students1[9]="waheed";
+        //delete(students1[9]);
+        students1.push("habiba");
+        students1.unshift("rawan");
+
+        console.log(students1);
+
+        console.log(typeof(students1.toString()));
+
+        var allstudents=students1.concat(students2);
+        console.log(allstudents);
+
+        var textarr=allstudents.join(" , ");
+        console.log(textarr);
+
+
+        var girls=allstudents.slice(5);
+        
+        
+        //var girls=allstudents.slice(-2);
+        console.log(allstudents);
+        //girls.splice(8,1,"eman");
+        //console.log(girls);
+
+       console.log(allstudents.indexOf("mohamed"),5);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        //console.log(students1[6]);
+
+
+      /*   for(var x=0;x<students1.length;x++)
+        {
+            console.log(students1[x]);
+
+        }
+        for(y in students1 )
+        {
+
+            console.log(students1[y]);
+
+        } 
+
+        for(m of students1 )
+        {
+
+            console.log(m);
+
+        }
+        */
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+        
+
+        
+
+
+
+
+    </script>
+
+</body>
+</html>

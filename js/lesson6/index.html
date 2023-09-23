@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="date"></p>
+    <button onclick="getdnow()">getdate</button>
+    <button onclick="clearInterval(inter)"> clear timer</button>
+
+    <button onclick="getwidth()"> click to calculate width</button>
+    
+
+
+
+    <script>
+        function getdnow(){
+            var d1=new Date().toLocaleString();
+            document.getElementById('date').innerHTML=d1;
+        }
+       var inter=setInterval(getdnow,1000);
+
+       
+
+
+
+        //BOM Browser object model 
+/* 
+        window.alert("welcome");
+
+        if(window.confirm("confirm this "))
+        {
+            console.log("you pressed ok");
+        }
+        else{
+            console.log("you pressed cancel");
+        }
+
+        var uname=window.prompt("whats your name","ali");
+        console.log(uname); */
+
+
+        function getwidth(){
+            console.log("window width = "+window.innerWidth);
+            console.log("screen width = "+screen.width);
+            console.log(window.location.pathname);
+            console.log(window.location.href);
+
+        }
+
+
+
+    </script>
+</body>
+</html>

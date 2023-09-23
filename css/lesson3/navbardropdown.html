@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+     nav{
+    padding: 0px;
+    background-color: black;
+    }
+    nav ul{
+        padding: 0px;
+        list-style-type: none;
+    }
+    nav ul li{
+        display: inline-block;
+    }
+    nav ul li a{
+        color: white;
+        text-decoration: none;
+        border-bottom: 4px solid black;
+
+        display: inline-block;
+        padding: 10px 30px;
+        font-weight: bold;
+
+    }
+    nav ul li a:hover{
+        background-color:rgb(255, 240, 155);
+        color: black;
+        border-bottom: 4px solid darkgoldenrod;
+
+    }
+    nav ul .menuliitem {
+
+        position: relative;
+        
+    }
+    nav ul li .dropmenu{
+        position: absolute;
+        width: 130px;
+        display: none;
+
+    }
+    nav ul .menuliitem:hover  .dropmenu{
+        display: block;
+
+    }
+
+    nav ul li .dropmenu li{
+        display: block;
+
+    }
+    nav ul li .dropmenu li a{
+        display: block;
+        
+        border: none;
+        background-color: black;
+        color: wheat;
+        
+    }
+    nav ul li .dropmenu li a:hover{
+        background-color: wheat;
+        color: black;
+
+
+    }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="">index</a></li>
+            <li><a href="">about</a></li>
+            <li><a href="">contact</a></li>
+            <li class="menuliitem">
+                <a href="">user</a>
+                <ul class="dropmenu">
+                    <li><a href="">sign in</a></li>
+                    <li><a href="">sign up</a></li>
+                    <li><a href="">sign out</a></li>
+                </ul>
+
+            </li>
+            <li><a href="">blog</a></li>
+        </ul>
+    </nav>
+    
+</body>
+</html>

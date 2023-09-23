@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        var num1=10.39356;
+        var num2="30";
+        console.log(num1.toFixed(3));
+        console.log(Math.round(num1));
+        console.log(Math.ceil(num1));
+        console.log(Math.floor(num1));
+
+        var r1=Math.floor(Math.random()*100);
+        console.log(r1);
+
+        function getRndInteger(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) ) + min;
+        }
+        var r2=getRndInteger(1,10);
+        console.log(r2);
+
+        var message="welcome all here all all";
+        console.log(message.length);
+        console.log(message[0]);
+        console.log(message.charAt(0));
+        console.log(message.slice(-4));
+        console.log(message.substring(2,8));//6 digits
+        console.log(message.substr(2,8));//8 digits
+        console.log(message.split(" "));
+        console.log(message.indexOf("sara"));
+        console.log(message.indexOf("all",9));
+        console.log(message.lastIndexOf("all"));
+        console.log(message.search("sara"));
+        if(/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i.test("progahmed@gmsil.com"))
+        {
+            console.log('email address');
+
+        }
+        else{
+            console.log('not email address');
+
+        }
+        if(/^01\d{10,11}/.test('0111111d111111'))
+        {
+            console.log('phone');
+
+        }
+        else{
+            console.log('not phone');
+
+        }
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

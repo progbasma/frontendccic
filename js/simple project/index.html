@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #examresult{
+            padding: 20px;
+            border: 1px solid gray;
+            width: 60%;
+            margin: auto;
+            margin-top: 50px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="exam">
+        <div id="quiz">
+
+        </div>
+        <button onclick="getresult()">result</button>
+
+    </div>
+    <div id="examresult">
+
+
+    </div>
+    
+
+    <script>
+        //quiz exam 
+        function Question(qnum,qtitle,qop1,qop2,qop3,qanswer)
+        {
+                this.qnum=qnum;
+                this.qtitle=qtitle;
+                this.qop1=qop1;
+                this.qop2=qop2;
+                this.qop3=qop3;
+                this.qanswer=qanswer;
+
+        }
+
+        var q1=new Question("q1","What is HTML?","hyper text markup language","hyper transfer markup language","hyper text mono language","hyper text markup language");
+        var q2=new Question("q2","what is CSS?","Cascade system sheet","cascade sodo sheet","cascade style sheet","cascade style sheet");
+        var q3=new Question("q3", "Who is making the Web standards?", "mozilla","google","microsoft");
+        var q4=new Question("q4", "Choose the correct HTML element for the largest heading:", "h1","h6","head","h1");
+        var q5=new Question("q5", "What is the correct HTML element for inserting a line break?", "break","br","lb");
+        var q6=new Question("q6", "Where in an HTML document is the correct place to refer to an external style sheet?", "in the <head> section","in the <body> section","at the end of the document");
+        var q7=new Question("q6", "Where in an HTML document is the correct place to refer to an external style sheet?", "in the <head> section","in the <body> section","at the end of the document");
+        var q8=new Question("q7", "Which HTML tag is used to define an internal style sheet?", "script","style","css");
+        var q9=new Question("q8", "Which HTML attribute is used to define inline styles?", "style","font","class");
+        var q10=new Question("q9", "The external JavaScript file must contain the script tag.", "False","True","Nothing");
+        var q11=new Question("q10", "How do you create a function in JavaScript?", "function = myfunction()","function:myfunction()","function myfunction()");
+        var q12=new Question("q11", "How do you call a function named 'myFunction'?", "call myfunction()","myfunction()","call function myfunction()");
+        var q13=new Question("q12", "How does a WHILE loop start?", "while (i <= 10)","while (i <= 10; i++)","while i= 1 to 10");
+        var q14=new Question("q13","Who is making the Web standards?","The world wide web Consortium","Mozilla","Google","Microsoft");
+        var q15=new Question("q14","Which HTML tag is used to define an internal style sheet?","style","CSS","Script","<P>");
+        var q16=new Question("q15","Which is the correct CSS syntax?","{body;color:black}","body:color:black;","body{color:black}");
+        var q17=new Question("q16","Which of the following properties is used to make a font italic?","font-family","font-style","font-weight","font-variant");
+        var q18=new Question("q17","To add a red color to all H1 elements on a website at once, we use...?","h1.all{color:red}","h1 {color:red}","Google","h1 all{color:red}");
+        var q19=new Question("q18","What is the attribute used in HTML to directly add CSS formatting to the element itself","style ","font","class","color");
+        var q20=new Question("q19","Which of the following properties indicates which links have been visited?","link","visited","hover","active")  ;
+                    
+
+        var quiz=document.getElementById("quiz");
+
+        var questionsarr=[q1,q2,q3,q4,q5,q6,q7,q8,q9,q10,q11,q12,q13,q14,q15,q16,q17,q18,q19,q20];
+        var rondarrq=[];   
+        function getRndInteger(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) ) + min;
+        }
+     
+        var i=1;
+        while(i<=5)
+        {
+            var rondoqqindex=getRndInteger(0,19);
+            var rondomquestion=questionsarr[rondoqqindex];
+            rondarrq.push(rondomquestion);
+
+
+            i++;
+        }
+
+        for(question of rondarrq)
+        {
+          quiz.innerHTML+= question.qtitle+"<br>";
+          quiz.innerHTML+= `<input type="radio" name="${question.qnum}" value="${question.qop1}" >`+question.qop1+"<br>";
+          quiz.innerHTML+= `<input type="radio" name="${question.qnum}" value="${question.qop2}" >`+question.qop2+"<br>";
+          quiz.innerHTML+= `<input type="radio" name="${question.qnum}" value="${question.qop3}" >`+question.qop3+"<br>";
+          quiz.innerHTML+="<br>";
+
+        }
+
+
+        function getresult()
+        {
+            var truequestions=0;
+            var falsequestions=0;
+            var result=0;
+
+            for(question of rondarrq)
+            {
+
+               var questionoptions= document.getElementsByName(question.qnum);
+               for(option of questionoptions)
+               {
+                if(option.checked)
+                {
+                   if(option.value==question.qanswer)
+                   {
+                    truequestions+=1;
+
+                   }
+                   else{
+                    falsequestions+=1;
+                   }
+                }
+
+               }
+
+
+            }
+            //console.log(truequestions);
+            //console.log(falsequestions);
+
+            result=truequestions/rondarrq.length*100;
+            document.getElementById('exam').style.display="none";
+            document.getElementById("examresult").style.display="block";
+
+            if(result>=50)
+            {
+                document.getElementById("examresult").innerHTML="Congratulation , your score = "+result+" % ";
+
+                document.getElementById("examresult").style.borderColor="green";
+                document.getElementById("examresult").style.color="green";
+
+            }
+            else{
+                document.getElementById("examresult").innerHTML="Sorry Failed, your score = "+result+" % ";
+                document.getElementById("examresult").style.borderColor="red";
+                document.getElementById("examresult").style.color="red";
+
+
+            }
+
+
+        }
+
+
+
+
+        
+
+
+
+    </script>
+</body>
+</html>

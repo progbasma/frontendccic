@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="wow/animate.css">
+
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        #d1{
+            width: 100px;
+            height: 100px;
+            animation-name: a1;
+            animation-duration: 5s;
+            animation-iteration-count: 3;
+            position: relative;
+            background-color:#3aa ;
+            
+
+        }
+        @keyframes a1 {
+           0%{
+            left: 0px;
+            background-color:#3aa ;
+
+
+           }
+           50%{
+            left: calc(100% - 100px);
+            background-color: rgb(91, 57, 105)
+
+           }
+           100%{
+            left: 0px;
+            background-color:#3aa ;
+
+
+           }
+            
+        }
+        h1,h2{
+            padding: 50px;
+            text-align: center;
+            
+        }
+        #content{
+            padding-top: 1000px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="wow bounceInUp"  style="">WELCOME ALL HERE</h1>
+    <div id="d1"></div>
+    <div id="content">
+
+        <h2 class="wow bounceInUp" data-wow-delay="5s"> welcome all here</h2>
+    </div>
+
+   
+    <script src="wow/wow.min.js"></script>
+    <script>
+    new WOW().init();
+    </script>
+</body>
+</html>

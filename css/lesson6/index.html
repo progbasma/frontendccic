@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            font-size: 12px;
+            --bgcolor1:#f1f1f1;
+
+        }
+        p{
+
+            font-size: 1.5rem;
+            background-color: var(--bgcolor1);
+            width:min(50%,800px);
+            padding: 50px;
+
+        }
+        #p1{
+            background-color: lightblue;
+        }
+        .c1{
+            background-color: bisque!important;
+            background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%)!important;
+        }
+        #d1{
+            width: 100px;
+            height: 100px;
+            background-color: sienna;
+            transform: translate(50px);
+            transform: rotate(135deg);
+            transform: scale(0.5,2);
+            transform: skew(-20deg);
+            transform: translate(50px,50px) rotate(135deg) ;
+        }
+
+        #d2{
+            width: 100px;
+            height: 100px;
+            
+            background: sandybrown;
+            transition: width 2s linear 1s,height 2s ,background 2s,transform 2s;
+        }
+        #d2:hover{
+            background-color: slateblue;
+            width: 120px;
+            height: 120px;
+            transform: rotate(145deg);
+
+        }
+
+    </style>
+</head>
+<body>
+    <div id="d2"></div>
+    <div id="d1"></div>
+    <p id="p1" class="c1 c2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates voluptas dolores dignissimos, rerum dolorem recusandae fugiat doloribus ipsum tenetur eum asperiores nostrum similique totam culpa vel cumque distinctio commodi sint?</p>
+    
+
+</body>
+</html>

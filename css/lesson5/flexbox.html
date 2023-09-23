@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        #cards {
+            display: flex;
+            /* flex-direction: column; */
+            flex-wrap: wrap;
+            justify-content: center;
+       
+            
+
+        }
+           #cards section{
+         
+            width: 25%;
+            border: 1px solid gray;
+            margin: 10px;
+
+         
+        }
+        main{
+            display: flex;
+
+        }
+        main aside{
+            flex: 30%;
+           
+            background-color: lightblue;
+        }
+        main section{
+
+            flex: 70%;
+            background-color: antiquewhite;
+        }
+        @media screen and (max-width:700px) {
+            main{
+                flex-direction: column;
+            }
+            main aside, main section{
+                flex: 100%;
+
+            }
+
+            #cards{
+                flex-direction: column;
+            }
+            #cards section{
+                flex:100%;
+                width: 100%;
+
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    
+
+    <main>
+        <aside>welcome</aside>
+        <section>welcome</section>
+    </main>
+    <div id="cards">
+        <section>
+            <img src="apurba-nag-usVYPlEuPK4-unsplash.jpg" alt="" width="100%">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta pariatur quo animi atque similique ratione dolore ex aliquam aliquid rem unde aspernatur explicabo provident, nihil, ab adipisci tempore, nam est.</p>
+        </section>
+        <section>
+            <img src="apurba-nag-usVYPlEuPK4-unsplash.jpg" alt="" width="100%">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta pariatur quo animi atque similique ratione dolore ex aliquam aliquid rem unde aspernatur explicabo provident, nihil, ab adipisci tempore, nam est.</p>
+        </section>
+        <section>
+            <img src="apurba-nag-usVYPlEuPK4-unsplash.jpg" alt="" width="100%">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta pariatur quo animi atque similique ratione dolore ex aliquam aliquid rem unde aspernatur explicabo provident, nihil, ab adipisci tempore, nam est.</p>
+        </section>
+        <section>
+            <img src="apurba-nag-usVYPlEuPK4-unsplash.jpg" alt="" width="100%">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta pariatur quo animi atque similique ratione dolore ex aliquam aliquid rem unde aspernatur explicabo provident, nihil, ab adipisci tempore, nam est.</p>
+        </section>
+        <section style="order:1">
+            <img src="apurba-nag-usVYPlEuPK4-unsplash.jpg" alt="" width="100%">
+            <p> 5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta pariatur quo animi atque similique ratione dolore ex aliquam aliquid rem unde aspernatur explicabo provident, nihil, ab adipisci tempore, nam est.</p>
+        </section>
+        <section>
+            <img src="apurba-nag-usVYPlEuPK4-unsplash.jpg" alt="" width="100%">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta pariatur quo animi atque similique ratione dolore ex aliquam aliquid rem unde aspernatur explicabo provident, nihil, ab adipisci tempore, nam est.</p>
+        </section>
+
+    </div>
+</body>
+</html>

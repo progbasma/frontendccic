@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="signin.html" method="get">
+
+        <fieldset>
+            <legend>personal data</legend>
+
+            <label for="">username</label>
+            <input type="text" name="username" placeholder="Enter username" maxlength="4" size="30" autocomplete="off" autofocus required>
+    
+            <br>
+            <label for="">password</label>
+            <input type="password"name="password"  placeholder="Enter password" disabled  >
+
+            
+        </fieldset>
+      
+   
+
+      <br>
+      <label for="">gender</label>
+      <input type="radio" name="gender" id="" value="male" >male
+      <input type="radio" name="gender" id="" value="female" checked>female
+
+
+      <br>
+        <label for="">hobby</label>
+        <input type="checkbox" name="hobby" value="drawing">drawing
+        <input type="checkbox" name="hobby" value="computer">computer
+        <input type="checkbox" name="hobby" value="football" checked>football
+        <input type="checkbox" name="hobby" value="reading">reading
+
+
+        <br>
+        <label for="">message</label>
+        <textarea name="" id="" cols="30" rows="10" name="message" placeholder="Leave message here"></textarea>
+
+        <br>
+        <label for="">faculty</label>
+        <select name="faculty" id="">
+
+            <optgroup label="scientific">
+                <option >computerscience</option>
+                <option value="op2" selected>engineering</option>
+                <option value="op3">science</option>
+            </optgroup>
+           
+            <optgroup label="group2">
+                <option value="op4">arts</option>
+                <option value="op5">commerce</option>
+                <option value="op6">education</option>
+            </optgroup>
+            
+
+        </select>
+        <datalist id="list1">
+            <option value="op4">arts</option>
+            <option value="op5">commerce</option>
+            <option value="op6">education</option>
+        </datalist>
+        <input type="list" list="list1">
+        <br>
+        <input type="color">
+        <br>
+        <input type="email" name="email">
+        <br>
+        <input type="url">
+        <br>
+        <input type="date">
+        <br>
+        <input type="time">
+        <br>
+        <input type="datetime-local">
+        <br>
+        <input type="file" multiple>
+        <br>
+        <input type="hidden">
+        <br>
+
+
+        <input type="number" min="1" max="10" step="2" value="5">
+        <br>
+        <input type="range"  min="1" max="10" step="2" value="5">
+
+        <br>
+        <input type="search">
+        <br>
+        <input type="tel">
+
+
+
+
+
+      
+      <br>
+    
+
+
+      <button>submit</button>
+      <button formmethod="post" formaction="index.html" formnovalidate formtarget="_blank">homepage</button>
+    </form>
+
+  
+</body>
+</html>

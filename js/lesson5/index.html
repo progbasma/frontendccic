@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1"></p>
+    <img src="lightoff.jpg" alt="" onmouseover="func3()" onmouseout="func4()" id="img1" width="100px" height="100px">
+
+    <p class="c1"></p>
+    <p class="c1"></p>
+    <p class="c1"></p>
+    <p class="c1"></p>
+    <div id="div1"></div>
+
+    <input type="text" name="" id="email" placeholder=""><span id="result"></span><br><br>
+    <input type="password" name="" id="password" placeholder="" onkeyup="func2()"><span id="result2"></span>
+
+    <script>
+        // html js DOM ,js  BOM
+        //Document Object Model
+
+        //get element
+
+       var p1=document.getElementById('p1'); // return element
+
+       var c1=document.getElementsByClassName('c1'); // return collection = array 
+
+       var p=document.getElementsByTagName('p');
+
+       var form1=document.getElementsByName('form1');
+
+        //change in element
+        p1.innerHTML="welcome from js DOM";
+        p1.style.backgroundColor="lightblue";
+        document.getElementById('email').value="basma";
+        document.getElementById('email').placeholder="Enter Username";
+        document.getElementById('email').setAttribute("placeholder","Enter Username");
+
+      
+
+
+
+        console.log(p1);
+        
+        for(x of c1)
+        {
+            x.innerHTML="welcome c1 in js";
+            x.style.backgroundColor="lightblue";
+        }
+
+
+        c1[1].style.backgroundColor="lightgray";
+
+        //event
+
+        function func1()
+
+        {
+           var email=document.getElementById('email').value;
+           if(/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i.test(email))
+           {
+            document.getElementById('result').innerHTML="valid email";
+            document.getElementById('result').style.color="green";
+
+           }
+           else{
+            document.getElementById('result').innerHTML="invalid email";
+            document.getElementById('result').style.color="red";
+
+
+           }
+
+        }
+
+        function func2()
+
+        {
+           var password=document.getElementById('password').value;
+           if(/^((?=\S*?[A-Z])(?=\S*?[a-z])(?=\S*?[0-9]).{6,})\S$/i.test(password))
+           {
+            document.getElementById('result2').innerHTML="strong password";
+            document.getElementById('result2').style.color="green";
+
+           }
+           else{
+            document.getElementById('result2').innerHTML="week password";
+            document.getElementById('result2').style.color="red";
+
+          }
+
+        }
+
+        function func3()
+        {
+            document.getElementById('img1').src='lighton.jpg';
+
+        }
+
+        function func4()
+        {
+            document.getElementById('img1').src='lightoff.jpg';
+
+        }
+       
+
+
+        //document.getElementById('email').onblur=func1;
+        /* document.getElementById('email').onblur=function(){
+            func1();
+        }; */
+        document.getElementById('email').addEventListener("blur",func1);
+
+
+
+       //add or remove elements
+       document.getElementById('div1').innerHTML='<p class="cp" id="pp">welcome</p>';
+       var p3=document.getElementById('pp');
+       document.getElementById('div1').removeChild(p3);
+
+
+      var p4= document.createElement('p');
+      var txt=document.createTextNode("welcome");
+      p4.appendChild(txt);
+
+      document.getElementById('div1').appendChild(p4);
+
+
+      var c1p=document.querySelectorAll('.c1');
+      for(xx of c1p)
+      {
+        xx.innerHTML="basma";
+
+      }
+     
+
+
+
+
+    </script>
+</body>
+</html>

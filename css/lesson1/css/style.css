@@ -1,0 +1,68 @@
+
+
+/*
+selector{
+property:value;
+property:value;
+
+}
+
+*/
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+header{
+
+
+    
+}
+nav{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+nav a{
+    color: white;
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+main{
+    height: 600px;
+
+
+}
+main aside{
+    width: 20%;
+    background-color: lightblue;
+    color: black;
+    height: 100%;
+    float: left;
+    padding: 30px 20px;
+
+}
+main section{
+    width: 60%;
+    background-color: blanchedalmond;
+    height: 100%;
+    float: left;
+    padding: 30px 20px;
+
+
+}
+main aside button{
+    background-color: gray;
+    padding: 10px;
+    border: none;
+    color: white;
+    margin-top: 10px;
+}
+main aside input{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0px;
+
+}

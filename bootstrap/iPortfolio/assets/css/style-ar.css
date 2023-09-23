@@ -1,0 +1,30 @@
+body{
+    overflow-x: hidden;
+}
+#header{
+   right: 0!important;
+}
+#main {
+    margin-left: 0px;
+    margin-right: 300px;
+}
+.section-title h2::after
+{
+    right: 0!important;
+}
+
+.about .content ul strong {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.skills .progress .skill .val {
+    float: left;
+}
+.resume .resume-item {
+    padding: 0 20px 20px 0px;
+    border-left: none;
+    border-right: 2px solid #1f5297;
+}
+.resume .resume-item::before{
+    right: -9px;
+}

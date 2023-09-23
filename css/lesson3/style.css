@@ -1,0 +1,96 @@
+*{
+    padding: 0px;
+     margin: 0px;
+     box-sizing: border-box; 
+ }
+ nav,header{
+     padding: 0px;
+     background-color: black;
+ }
+ nav a{
+     color: white;
+     text-decoration: none;
+     border-bottom: 4px solid black;
+
+     display: inline-block;
+     padding: 10px 20px;
+     font-weight: bold;
+ }
+
+
+
+ nav a:hover{
+     background-color:rgb(255, 240, 155);
+     color: darkgoldenrod;
+     border-bottom: 4px solid darkgoldenrod;
+
+ }
+ header{
+    padding: 0px;
+    background-color: black;
+}
+ header ul{
+     padding: 0px;
+     list-style-type: none;
+ }
+ header ul li{
+     display: inline-block;
+ }
+ header ul li a{
+     color: white;
+     text-decoration: none;
+     border-bottom: 4px solid black;
+
+     display: inline-block;
+     padding: 10px 20px;
+     font-weight: bold;
+
+ }
+ header ul li a:hover{
+     background-color:rgb(255, 240, 155);
+     color: darkgoldenrod;
+     border-bottom: 4px solid darkgoldenrod;
+
+ }
+ aside{
+     background-color: black;
+     width: 30%;
+ }
+ aside a{
+     color: white;
+     text-decoration: none;
+     border-bottom: 4px solid black;
+     text-align: center;
+     display: block;
+     padding: 10px 20px;
+     font-weight: bold;
+
+ }
+ aside a:hover{
+     background-color:rgb(255, 240, 155);
+     color: darkgoldenrod;
+     border-bottom: 4px solid darkgoldenrod;
+ }
+
+ section{
+     background-color: black;
+     margin: 10px;
+     width: 30%;
+
+ }
+ section a{
+     color: white;
+     text-decoration: none;
+     border-bottom: 4px solid black;
+     text-align: center;
+     display: block;
+     padding: 10px 20px;
+     font-weight: bold;
+
+ }
+ section a:hover{
+     background-color:rgb(255, 240, 155);
+     color: darkgoldenrod;
+     border-bottom: 4px solid darkgoldenrod;
+ }
+

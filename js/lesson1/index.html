@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+<body>
+    <p id="p1"> welcome</p>
+    <button onclick="func1()"> click</button>
+
+
+
+
+
+
+
+    <script>
+        //
+
+        /*
+        1-change in html , add or remove elements , change in attribute value
+        2-change in css style 
+        3-make an action for any event (click , dbclick , hover , mouseenter , mouseleave , scroll , wheel , focus , blur ,key up , key press , .......................)
+
+        */
+       //document.write('welcome');
+       //alert('welcome');
+
+       console.log('welcome');
+
+       var myname='basma';
+       var x=5;
+       var x=7;
+       var n=10.34;
+       var issuccessed=true;
+       var students=['ahmed',21,80];
+
+       //operators
+       //1-mathematical operators + - * / % ** 
+       console.log(10+20*3-40+2**2-(5-4));
+
+       //2-assignment operators  = += -+ *= /= 
+       x=2;
+       x+=3; //x=x+3
+
+       //3-increment , decrement operators ++x , x++ , --x,x--
+
+       console.log(++x);
+       console.log(x);
+
+
+       //concatenation or string operator
+       var myname="basma";
+       console.log("welcome  "+myname +" in our class");
+
+       console.log(`welcome ${myname} in our class`);
+
+       //comparision operators  > < >= <= != !==
+
+
+
+       //logical operators  && || !
+       var degree=87;
+       var isgraduated=true;
+
+       console.log(!isgraduated);
+       console.log(degree>=65 || isgraduated==false );
+
+/******************************************************************************/
+       function func1()
+       {
+        document.getElementById('p1').innerHTML="welcome from js";
+        document.getElementById('p1').style.backgroundColor="lightblue";
+        document.getElementById('p1').style.padding="20px";
+
+
+       }
+
+       //func1();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
